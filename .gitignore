@@ -17,6 +17,9 @@ Pods
 # Firebase / Google
 GoogleService-Info.plist
 
+# API KEY INFO
+APIKey.swift
+
 ## Build generated
 build/
 DerivedData
