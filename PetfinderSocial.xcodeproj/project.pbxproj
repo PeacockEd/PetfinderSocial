@@ -1,0 +1,439 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		936DC95B9A5EEBA57E9807AB /* Pods_PetfinderSocial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A53CFFFAC98B4301DABCAA4E /* Pods_PetfinderSocial.framework */; };
+		EE55C7F41DE4CE6700EDE78F /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE55C7F31DE4CE6700EDE78F /* MainVC.swift */; };
+		EE7719DA1DE4D41B0071D66B /* DropShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7719D91DE4D41B0071D66B /* DropShadow.swift */; };
+		EE7719DC1DE4D5150071D66B /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7719DB1DE4D5150071D66B /* HeaderView.swift */; };
+		EE7719DE1DE4FD9A0071D66B /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7719DD1DE4FD9A0071D66B /* APIKey.swift */; };
+		EE9AAE1B1DDF603C0076534A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9AAE1A1DDF603C0076534A /* AppDelegate.swift */; };
+		EE9AAE201DDF603C0076534A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE9AAE1E1DDF603C0076534A /* Main.storyboard */; };
+		EE9AAE221DDF603C0076534A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE9AAE211DDF603C0076534A /* Assets.xcassets */; };
+		EE9AAE251DDF603C0076534A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE9AAE231DDF603C0076534A /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		939D73E75E2117BC84D9DA84 /* Pods-PetfinderSocial.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PetfinderSocial.release.xcconfig"; path = "Pods/Target Support Files/Pods-PetfinderSocial/Pods-PetfinderSocial.release.xcconfig"; sourceTree = "<group>"; };
+		A53CFFFAC98B4301DABCAA4E /* Pods_PetfinderSocial.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PetfinderSocial.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B703C869D8892D5625D6CEB6 /* Pods-PetfinderSocial.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PetfinderSocial.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PetfinderSocial/Pods-PetfinderSocial.debug.xcconfig"; sourceTree = "<group>"; };
+		EE55C7F31DE4CE6700EDE78F /* MainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		EE7719D91DE4D41B0071D66B /* DropShadow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropShadow.swift; sourceTree = "<group>"; };
+		EE7719DB1DE4D5150071D66B /* HeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		EE7719DD1DE4FD9A0071D66B /* APIKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
+		EE9AAE171DDF603C0076534A /* PetfinderSocial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PetfinderSocial.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE9AAE1A1DDF603C0076534A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EE9AAE1F1DDF603C0076534A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EE9AAE211DDF603C0076534A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EE9AAE241DDF603C0076534A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EE9AAE261DDF603C0076534A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EE9AAE141DDF603B0076534A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				936DC95B9A5EEBA57E9807AB /* Pods_PetfinderSocial.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		631EBFB7F5F1C7BE421984AA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A53CFFFAC98B4301DABCAA4E /* Pods_PetfinderSocial.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ACFF2748E6843BDECCFB9B03 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B703C869D8892D5625D6CEB6 /* Pods-PetfinderSocial.debug.xcconfig */,
+				939D73E75E2117BC84D9DA84 /* Pods-PetfinderSocial.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		EE55C7EF1DE4BC5000EDE78F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EE7719DD1DE4FD9A0071D66B /* APIKey.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		EE55C7F01DE4BC5700EDE78F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EE9AAE1A1DDF603C0076534A /* AppDelegate.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		EE55C7F11DE4BC6400EDE78F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EE9AAE1E1DDF603C0076534A /* Main.storyboard */,
+				EE9AAE231DDF603C0076534A /* LaunchScreen.storyboard */,
+				EE55C7F31DE4CE6700EDE78F /* MainVC.swift */,
+				EE7719DB1DE4D5150071D66B /* HeaderView.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		EE55C7F21DE4BCEB00EDE78F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EE9AAE211DDF603C0076534A /* Assets.xcassets */,
+				EE9AAE261DDF603C0076534A /* Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		EE7719D81DE4D3F00071D66B /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				EE7719D91DE4D41B0071D66B /* DropShadow.swift */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
+		EE9AAE0E1DDF603B0076534A = {
+			isa = PBXGroup;
+			children = (
+				EE9AAE191DDF603C0076534A /* PetfinderSocial */,
+				EE9AAE181DDF603C0076534A /* Products */,
+				ACFF2748E6843BDECCFB9B03 /* Pods */,
+				631EBFB7F5F1C7BE421984AA /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		EE9AAE181DDF603C0076534A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EE9AAE171DDF603C0076534A /* PetfinderSocial.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EE9AAE191DDF603C0076534A /* PetfinderSocial */ = {
+			isa = PBXGroup;
+			children = (
+				EE7719D81DE4D3F00071D66B /* Protocols */,
+				EE55C7F21DE4BCEB00EDE78F /* Resources */,
+				EE55C7EF1DE4BC5000EDE78F /* Model */,
+				EE55C7F11DE4BC6400EDE78F /* View */,
+				EE55C7F01DE4BC5700EDE78F /* Controller */,
+			);
+			path = PetfinderSocial;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EE9AAE161DDF603B0076534A /* PetfinderSocial */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE9AAE291DDF603C0076534A /* Build configuration list for PBXNativeTarget "PetfinderSocial" */;
+			buildPhases = (
+				7E49BCEF26972E4243303CE8 /* [CP] Check Pods Manifest.lock */,
+				EE9AAE131DDF603B0076534A /* Sources */,
+				EE9AAE141DDF603B0076534A /* Frameworks */,
+				EE9AAE151DDF603B0076534A /* Resources */,
+				B76B8DF37A3274391BFF4BEE /* [CP] Embed Pods Frameworks */,
+				322304C92ECB129AD39A8058 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PetfinderSocial;
+			productName = PetfinderSocial;
+			productReference = EE9AAE171DDF603C0076534A /* PetfinderSocial.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EE9AAE0F1DDF603B0076534A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = "Edward P. Kelly LLC";
+				TargetAttributes = {
+					EE9AAE161DDF603B0076534A = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = NF3763C3BM;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = EE9AAE121DDF603B0076534A /* Build configuration list for PBXProject "PetfinderSocial" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EE9AAE0E1DDF603B0076534A;
+			productRefGroup = EE9AAE181DDF603C0076534A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EE9AAE161DDF603B0076534A /* PetfinderSocial */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EE9AAE151DDF603B0076534A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE9AAE251DDF603C0076534A /* LaunchScreen.storyboard in Resources */,
+				EE9AAE221DDF603C0076534A /* Assets.xcassets in Resources */,
+				EE9AAE201DDF603C0076534A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		322304C92ECB129AD39A8058 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PetfinderSocial/Pods-PetfinderSocial-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7E49BCEF26972E4243303CE8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B76B8DF37A3274391BFF4BEE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PetfinderSocial/Pods-PetfinderSocial-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EE9AAE131DDF603B0076534A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE9AAE1B1DDF603C0076534A /* AppDelegate.swift in Sources */,
+				EE7719DA1DE4D41B0071D66B /* DropShadow.swift in Sources */,
+				EE55C7F41DE4CE6700EDE78F /* MainVC.swift in Sources */,
+				EE7719DC1DE4D5150071D66B /* HeaderView.swift in Sources */,
+				EE7719DE1DE4FD9A0071D66B /* APIKey.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		EE9AAE1E1DDF603C0076534A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EE9AAE1F1DDF603C0076534A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EE9AAE231DDF603C0076534A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EE9AAE241DDF603C0076534A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EE9AAE271DDF603C0076534A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EE9AAE281DDF603C0076534A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EE9AAE2A1DDF603C0076534A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B703C869D8892D5625D6CEB6 /* Pods-PetfinderSocial.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = NF3763C3BM;
+				INFOPLIST_FILE = PetfinderSocial/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.epkelly.PetfinderSocial;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		EE9AAE2B1DDF603C0076534A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 939D73E75E2117BC84D9DA84 /* Pods-PetfinderSocial.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = NF3763C3BM;
+				INFOPLIST_FILE = PetfinderSocial/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.epkelly.PetfinderSocial;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EE9AAE121DDF603B0076534A /* Build configuration list for PBXProject "PetfinderSocial" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE9AAE271DDF603C0076534A /* Debug */,
+				EE9AAE281DDF603C0076534A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE9AAE291DDF603C0076534A /* Build configuration list for PBXNativeTarget "PetfinderSocial" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE9AAE2A1DDF603C0076534A /* Debug */,
+				EE9AAE2B1DDF603C0076534A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EE9AAE0F1DDF603B0076534A /* Project object */;
+}
