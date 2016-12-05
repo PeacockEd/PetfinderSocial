@@ -9,21 +9,15 @@
 import UIKit
 
 class MainVC: UIViewController {
+    
+    let service = PFSDataService.instance
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
+        service.fetchBreedListing(withRequest: PFSBreedListRequest(forAnimal: .cat), completion: { result in
+            let breedList = PFSBreedList(forAnimal: .cat, data: result)
+            debugPrint(breedList)
+        })
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

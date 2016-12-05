@@ -8,30 +8,40 @@
 
 /* Begin PBXBuildFile section */
 		936DC95B9A5EEBA57E9807AB /* Pods_PetfinderSocial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A53CFFFAC98B4301DABCAA4E /* Pods_PetfinderSocial.framework */; };
+		EE102E961DF48DA400E53F59 /* PFSBreedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE102E951DF48DA400E53F59 /* PFSBreedList.swift */; };
 		EE55C7F41DE4CE6700EDE78F /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE55C7F31DE4CE6700EDE78F /* MainVC.swift */; };
 		EE7719DA1DE4D41B0071D66B /* DropShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7719D91DE4D41B0071D66B /* DropShadow.swift */; };
 		EE7719DC1DE4D5150071D66B /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7719DB1DE4D5150071D66B /* HeaderView.swift */; };
 		EE7719DE1DE4FD9A0071D66B /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7719DD1DE4FD9A0071D66B /* APIKey.swift */; };
+		EE83EDBC1DE5391300BD27A2 /* PFSDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE83EDBB1DE5391300BD27A2 /* PFSDataService.swift */; };
+		EE83EDBE1DE5F52C00BD27A2 /* PFSBaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE83EDBD1DE5F52C00BD27A2 /* PFSBaseRequest.swift */; };
+		EE83EDC11DE5F9DD00BD27A2 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE83EDC01DE5F9DD00BD27A2 /* AppConstants.swift */; };
 		EE9AAE1B1DDF603C0076534A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9AAE1A1DDF603C0076534A /* AppDelegate.swift */; };
 		EE9AAE201DDF603C0076534A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE9AAE1E1DDF603C0076534A /* Main.storyboard */; };
 		EE9AAE221DDF603C0076534A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE9AAE211DDF603C0076534A /* Assets.xcassets */; };
 		EE9AAE251DDF603C0076534A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE9AAE231DDF603C0076534A /* LaunchScreen.storyboard */; };
+		EEADBB3B1DEE74C500191586 /* PFSBreedListRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEADBB3A1DEE74C500191586 /* PFSBreedListRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		939D73E75E2117BC84D9DA84 /* Pods-PetfinderSocial.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PetfinderSocial.release.xcconfig"; path = "Pods/Target Support Files/Pods-PetfinderSocial/Pods-PetfinderSocial.release.xcconfig"; sourceTree = "<group>"; };
 		A53CFFFAC98B4301DABCAA4E /* Pods_PetfinderSocial.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PetfinderSocial.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B703C869D8892D5625D6CEB6 /* Pods-PetfinderSocial.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PetfinderSocial.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PetfinderSocial/Pods-PetfinderSocial.debug.xcconfig"; sourceTree = "<group>"; };
+		EE102E951DF48DA400E53F59 /* PFSBreedList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PFSBreedList.swift; sourceTree = "<group>"; };
 		EE55C7F31DE4CE6700EDE78F /* MainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		EE7719D91DE4D41B0071D66B /* DropShadow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropShadow.swift; sourceTree = "<group>"; };
 		EE7719DB1DE4D5150071D66B /* HeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		EE7719DD1DE4FD9A0071D66B /* APIKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
+		EE83EDBB1DE5391300BD27A2 /* PFSDataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PFSDataService.swift; sourceTree = "<group>"; };
+		EE83EDBD1DE5F52C00BD27A2 /* PFSBaseRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PFSBaseRequest.swift; sourceTree = "<group>"; };
+		EE83EDC01DE5F9DD00BD27A2 /* AppConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		EE9AAE171DDF603C0076534A /* PetfinderSocial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PetfinderSocial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE9AAE1A1DDF603C0076534A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EE9AAE1F1DDF603C0076534A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EE9AAE211DDF603C0076534A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EE9AAE241DDF603C0076534A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EE9AAE261DDF603C0076534A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EEADBB3A1DEE74C500191586 /* PFSBreedListRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PFSBreedListRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,7 +76,7 @@
 		EE55C7EF1DE4BC5000EDE78F /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				EE7719DD1DE4FD9A0071D66B /* APIKey.swift */,
+				EE102E951DF48DA400E53F59 /* PFSBreedList.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -107,6 +117,18 @@
 			name = Protocols;
 			sourceTree = "<group>";
 		};
+		EE83EDBF1DE5F97100BD27A2 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				EE83EDC01DE5F9DD00BD27A2 /* AppConstants.swift */,
+				EE7719DD1DE4FD9A0071D66B /* APIKey.swift */,
+				EE83EDBB1DE5391300BD27A2 /* PFSDataService.swift */,
+				EE83EDBD1DE5F52C00BD27A2 /* PFSBaseRequest.swift */,
+				EEADBB3A1DEE74C500191586 /* PFSBreedListRequest.swift */,
+			);
+			name = Service;
+			sourceTree = "<group>";
+		};
 		EE9AAE0E1DDF603B0076534A = {
 			isa = PBXGroup;
 			children = (
@@ -128,6 +150,8 @@
 		EE9AAE191DDF603C0076534A /* PetfinderSocial */ = {
 			isa = PBXGroup;
 			children = (
+				EEADBB3C1DEE7DF200191586 /* Extensions */,
+				EE83EDBF1DE5F97100BD27A2 /* Service */,
 				EE7719D81DE4D3F00071D66B /* Protocols */,
 				EE55C7F21DE4BCEB00EDE78F /* Resources */,
 				EE55C7EF1DE4BC5000EDE78F /* Model */,
@@ -135,6 +159,13 @@
 				EE55C7F01DE4BC5700EDE78F /* Controller */,
 			);
 			path = PetfinderSocial;
+			sourceTree = "<group>";
+		};
+		EEADBB3C1DEE7DF200191586 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,8 +295,13 @@
 				EE9AAE1B1DDF603C0076534A /* AppDelegate.swift in Sources */,
 				EE7719DA1DE4D41B0071D66B /* DropShadow.swift in Sources */,
 				EE55C7F41DE4CE6700EDE78F /* MainVC.swift in Sources */,
+				EE83EDC11DE5F9DD00BD27A2 /* AppConstants.swift in Sources */,
+				EE102E961DF48DA400E53F59 /* PFSBreedList.swift in Sources */,
 				EE7719DC1DE4D5150071D66B /* HeaderView.swift in Sources */,
+				EEADBB3B1DEE74C500191586 /* PFSBreedListRequest.swift in Sources */,
+				EE83EDBE1DE5F52C00BD27A2 /* PFSBaseRequest.swift in Sources */,
 				EE7719DE1DE4FD9A0071D66B /* APIKey.swift in Sources */,
+				EE83EDBC1DE5391300BD27A2 /* PFSDataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,6 +345,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -359,6 +396,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;

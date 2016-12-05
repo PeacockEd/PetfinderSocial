@@ -5,4 +5,5 @@ use_frameworks!
 
 target 'PetfinderSocial' do
   pod 'Alamofire', '~> 4.0'
+  pod 'SwiftyJSON'
 end
