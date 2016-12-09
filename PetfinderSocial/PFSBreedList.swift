@@ -20,14 +20,16 @@ public enum PFSAnimalType: String {
     case smallfurry = "smallfurry"
 }
 
+typealias BreedList = Array<PFSBreedItem>
+
 struct PFSBreedList {
     
-    private let _animal: PFSAnimalType;
-    private var _data = [String]()
+    private let _animal: PFSAnimalType
+    private var _items = BreedList()
     
     init(forAnimal animal: PFSAnimalType, data:JSON) {
         _animal = animal
-        _data = parseBreedsList(data: data)
+        parseBreedsList(data: data)
     }
     
     var animal: PFSAnimalType {
@@ -36,25 +38,28 @@ struct PFSBreedList {
         }
     }
     
-    var data: Array<String> {
+    var items: BreedList {
         get {
-            return _data
+            return _items
         }
     }
     
-    mutating func parseBreedsList(data:JSON) -> Array<String> {
-        _data = [String]()
+    mutating private func parseBreedsList(data:JSON) {
+        _items = BreedList()
         guard let breedList = data[PFSConstants.keyPetfinder][PFSConstants.keyBreeds][PFSConstants.keyBreed].array else {
-            // TODO : Handle error is some way
-            return _data
+            // TODO : Handle error in some way
+            return
         }
         
         for breed in breedList {
             guard let name = breed[PFSConstants.keyContentProperty].string else {
                 continue
             }
-            _data.append(name)
+            _items.append(PFSBreedItem(withBreedName: name))
         }
-        return _data
+    }
+    
+    static func breedListFromJSON(data: JSON, forAnimal animal: PFSAnimalType) -> PFSBreedList {
+        return self.init(forAnimal: animal, data: data)
     }
 }

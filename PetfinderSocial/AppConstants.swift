@@ -13,11 +13,19 @@ struct APIConstants {
 }
 
 struct PFSConstants {
-    // API keys
-    static let paramKey         = "key"
-    static let paramFormat      = "format"
-    static let paramOutput      = "output"
-    static let paramAnimalKey   = "animal"
+    // API defaults
+    static let defaultRecordCount   = 25
+    static let defaultRecordOffset  = 0
+    
+    // API parameter names/keys
+    static let paramKey             = "key"
+    static let paramFormat          = "format"
+    static let paramOutput          = "output"
+    static let paramAnimalKey       = "animal"
+    static let paramLocationKey     = "location"
+    static let paramShelterNameKey  = "name"
+    static let paramOffsetKey       = "offset"
+    static let paramCountKey        = "count"
 
     // Content description keys
     static let keyContentProperty   = "$t"

@@ -13,17 +13,31 @@ import SwiftyJSON
 class PFSDataService {
     static let instance = PFSDataService()
     
-    func fetchBreedListing(withRequest request: PFSBaseRequest, completion: @escaping (JSON) -> ())
+    func fetchBreedListing(withRequest request: PFSBreedListRequest, completion: @escaping (PFSBreedList) -> ())
     {
         Alamofire.request(request.getRequestUrlWithApiMethod(), method: .get, parameters: request.getRequestUrlParameters(), encoding: URLEncoding.default).responseJSON { response in
             guard let codeResponse = response.response, codeResponse.statusCode == 200,
                 response.result.isSuccess == true,
                 let value = response.result.value
-            else {
+                else {
                     // TODO : Handle error is some way
                     return
             }
-            completion(JSON(value))
+            completion(PFSBreedList.breedListFromJSON(data: JSON(value), forAnimal: request.animal))
+        }
+    }
+    
+    func findShelters(withRequest request:PFSFindSheltersRequest, completion: (PFSShelterItem) -> ())
+    {
+        Alamofire.request(request.getRequestUrlWithApiMethod(), method: .get, parameters: request.getRequestUrlParameters(), encoding: URLEncoding.default).responseJSON { response in
+            guard let codeResponse = response.response, codeResponse.statusCode == 200,
+                response.result.isSuccess == true, let value = response.result.value
+                else {
+                    // TODO : Handle error in some way
+                    return
+            }
+            //debugPrint(value)
+            let list = PFSShelterList.shelterListFromJSON(data: JSON(value))
         }
     }
 }

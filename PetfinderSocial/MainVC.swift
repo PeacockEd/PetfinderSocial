@@ -15,9 +15,12 @@ class MainVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        service.fetchBreedListing(withRequest: PFSBreedListRequest(forAnimal: .cat), completion: { result in
-            let breedList = PFSBreedList(forAnimal: .cat, data: result)
-            debugPrint(breedList)
+//        service.fetchBreedListing(withRequest: PFSBreedListRequest(forAnimal: .cat), completion: { result in
+//            debugPrint(result.data)
+//        })
+        
+        service.findShelters(withRequest: PFSFindSheltersRequest(withLocation: "hazlet, nj"), completion: { result in
+            
         })
     }
 }

@@ -10,9 +10,18 @@ import Foundation
 
 class PFSBreedListRequest: PFSBaseRequest {
     
+    private var _animal: PFSAnimalType
+    
     init(forAnimal animal: PFSAnimalType)
     {
+        _animal = animal
         super.init(apiMethod: .BreedList)
         urlParams.updateValue(animal.rawValue, forKey: PFSConstants.paramAnimalKey)
+    }
+    
+    var animal: PFSAnimalType {
+        get {
+            return _animal
+        }
     }
 }
