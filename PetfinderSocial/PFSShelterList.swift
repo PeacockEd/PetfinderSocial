@@ -30,7 +30,11 @@ struct PFSShelterList {
         }
         
         for shelter in shelterList {
-            debugPrint(shelter)
+            //debugPrint(shelter)
+            guard let shelter_dict = shelter.dictionary else {
+                continue
+            }
+            _items.append(PFSShelterItem.createShelterItem(withDictionary: shelter_dict))
         }
     }
     

@@ -32,4 +32,18 @@ struct PFSConstants {
     static let keyPetfinder         = "petfinder"
     static let keyBreeds            = "breeds"
     static let keyBreed             = "breed"
+    
+    static let keyShelterId         = "id"
+    static let keyShelterState      = "state"
+    static let keyShelterCity       = "city"
+    static let keyShelterAddress1   = "address1"
+    static let keyShelterAddress2   = "address2"
+    static let keyShelterZip        = "zip"
+    static let keyShelterCountry    = "country"
+    static let keyShelterName       = "name"
+    static let keyShelterEmail      = "email"
+    static let keyShelterPhone      = "phone"
+    static let keyShelterFax        = "fax"
+    static let keyShelterLatitude   = "latitude"
+    static let keyShelterLongitude  = "longitude"
 }
