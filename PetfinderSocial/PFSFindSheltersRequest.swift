@@ -15,11 +15,16 @@ class PFSFindSheltersRequest: PFSBaseRequest {
     private var _offset: Int?
     private var _count: Int?
     
-    init(withLocation location: String)
+    init(withLocation location: String, recordCount: Int, recordOffset: Int)
     {
         _location = location
         super.init(apiMethod: .ShelterSearch)
         urlParams.updateValue(_location, forKey: PFSConstants.paramLocationKey)
+    }
+    
+    convenience init(withLocation location: String)
+    {
+        self.init(withLocation: location, recordCount: 25, recordOffset: 0)
     }
     
     var location: String {

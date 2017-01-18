@@ -27,7 +27,7 @@ class PFSDataService {
         }
     }
     
-    func findShelters(withRequest request:PFSFindSheltersRequest, completion: (PFSShelterItem) -> ())
+    func findShelters(withRequest request:PFSFindSheltersRequest, completion: @escaping (PFSShelterList) -> ())
     {
         Alamofire.request(request.getRequestUrlWithApiMethod(), method: .get, parameters: request.getRequestUrlParameters(), encoding: URLEncoding.default).responseJSON { response in
             guard let codeResponse = response.response, codeResponse.statusCode == 200,
@@ -36,8 +36,7 @@ class PFSDataService {
                     // TODO : Handle error in some way
                     return
             }
-            //debugPrint(value)
-            let list = PFSShelterList.shelterListFromJSON(data: JSON(value))
+            completion(PFSShelterList.shelterListFromJSON(data: JSON(value)))
         }
     }
 }

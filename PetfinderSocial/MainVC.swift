@@ -19,8 +19,10 @@ class MainVC: UIViewController {
 //            debugPrint(result.data)
 //        })
         
-        service.findShelters(withRequest: PFSFindSheltersRequest(withLocation: "hazlet, nj"), completion: { result in
-            
+        service.findShelters(withRequest: PFSFindSheltersRequest(withLocation: "10012"), completion: { result in
+            for shelter in result.items {
+                print("The name of this shelter is: \(shelter.name)")
+            }
         })
     }
 }
