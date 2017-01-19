@@ -52,11 +52,19 @@ class PFSBaseRequest {
     func getRequestUrlParameters() -> Parameters
     {
         if _urlParams.count > 0 {
-            _urlParams.updateValue(APIKey.key, forKey: PFSConstants.paramKey)
-            _urlParams.updateValue(_responseFormat.rawValue, forKey: PFSConstants.paramFormat)
-            _urlParams.updateValue(_outputType.rawValue, forKey: PFSConstants.paramOutput)
+            updateUrlParam(withValue: APIKey.key, forKey: PFSConstants.paramKey)
+            updateUrlParam(withValue: _responseFormat.rawValue, forKey: PFSConstants.paramFormat)
+            updateUrlParam(withValue: _outputType.rawValue, forKey: PFSConstants.paramOutput)
         }
         return _urlParams
+    }
+    
+    func updateUrlParam(withValue value: Any?, forKey key: String) {
+        if let value = value {
+            _urlParams.updateValue(value, forKey: key)
+        } else {
+            _urlParams.removeValue(forKey: key)
+        }
     }
     
     var urlParams: Parameters {

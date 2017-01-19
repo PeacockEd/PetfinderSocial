@@ -39,4 +39,8 @@ class PFSDataService {
             completion(PFSShelterList.shelterListFromJSON(data: JSON(value)))
         }
     }
+    
+    func fetchRandomPet() {
+        
+    }
 }

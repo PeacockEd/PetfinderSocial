@@ -24,7 +24,7 @@ class PFSFindSheltersRequest: PFSBaseRequest {
     
     convenience init(withLocation location: String)
     {
-        self.init(withLocation: location, recordCount: 25, recordOffset: 0)
+        self.init(withLocation: location, recordCount: PFSConstants.defaultRecordCount, recordOffset: PFSConstants.defaultRecordOffset)
     }
     
     var location: String {
@@ -37,12 +37,9 @@ class PFSFindSheltersRequest: PFSBaseRequest {
         }
     }
     
-    var name: String {
+    var name: String? {
         get {
-            if _name == nil {
-                _name = ""
-            }
-            return _name!
+            return _name
         }
         set {
             _name = newValue
@@ -50,12 +47,9 @@ class PFSFindSheltersRequest: PFSBaseRequest {
         }
     }
     
-    var offset: Int {
+    var offset: Int? {
         get {
-            if _offset == nil {
-                _offset = PFSConstants.defaultRecordOffset
-            }
-            return _offset!
+            return _offset
         }
         set {
             _offset = newValue
@@ -63,12 +57,9 @@ class PFSFindSheltersRequest: PFSBaseRequest {
         }
     }
     
-    var count: Int {
+    var count: Int? {
         get {
-            if _count == nil {
-                _count = PFSConstants.defaultRecordCount
-            }
-            return _count!
+            return _count
         }
         set {
             _count = newValue

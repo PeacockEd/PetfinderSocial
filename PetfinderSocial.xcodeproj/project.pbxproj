@@ -13,6 +13,7 @@
 		EE102E9A1DF7ADC900E53F59 /* PFSShelterItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE102E991DF7ADC900E53F59 /* PFSShelterItem.swift */; };
 		EE102E9C1DFB0BEA00E53F59 /* PFSShelterList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE102E9B1DFB0BEA00E53F59 /* PFSShelterList.swift */; };
 		EE102E9E1DFB0EE800E53F59 /* PFSBreedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE102E9D1DFB0EE800E53F59 /* PFSBreedItem.swift */; };
+		EE1C32051E2FBF5200FC28CF /* PFSFindPetRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1C32041E2FBF5200FC28CF /* PFSFindPetRequest.swift */; };
 		EE55C7F41DE4CE6700EDE78F /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE55C7F31DE4CE6700EDE78F /* MainVC.swift */; };
 		EE7719DA1DE4D41B0071D66B /* DropShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7719D91DE4D41B0071D66B /* DropShadow.swift */; };
 		EE7719DC1DE4D5150071D66B /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7719DB1DE4D5150071D66B /* HeaderView.swift */; };
@@ -36,6 +37,7 @@
 		EE102E991DF7ADC900E53F59 /* PFSShelterItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PFSShelterItem.swift; sourceTree = "<group>"; };
 		EE102E9B1DFB0BEA00E53F59 /* PFSShelterList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PFSShelterList.swift; sourceTree = "<group>"; };
 		EE102E9D1DFB0EE800E53F59 /* PFSBreedItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PFSBreedItem.swift; sourceTree = "<group>"; };
+		EE1C32041E2FBF5200FC28CF /* PFSFindPetRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PFSFindPetRequest.swift; sourceTree = "<group>"; };
 		EE55C7F31DE4CE6700EDE78F /* MainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		EE7719D91DE4D41B0071D66B /* DropShadow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropShadow.swift; sourceTree = "<group>"; };
 		EE7719DB1DE4D5150071D66B /* HeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 				EE83EDBD1DE5F52C00BD27A2 /* PFSBaseRequest.swift */,
 				EEADBB3A1DEE74C500191586 /* PFSBreedListRequest.swift */,
 				EE102E971DF798C500E53F59 /* PFSFindSheltersRequest.swift */,
+				EE1C32041E2FBF5200FC28CF /* PFSFindPetRequest.swift */,
 			);
 			name = Service;
 			sourceTree = "<group>";
@@ -309,6 +312,7 @@
 				EE55C7F41DE4CE6700EDE78F /* MainVC.swift in Sources */,
 				EE83EDC11DE5F9DD00BD27A2 /* AppConstants.swift in Sources */,
 				EE102E961DF48DA400E53F59 /* PFSBreedList.swift in Sources */,
+				EE1C32051E2FBF5200FC28CF /* PFSFindPetRequest.swift in Sources */,
 				EE7719DC1DE4D5150071D66B /* HeaderView.swift in Sources */,
 				EE102E981DF798C500E53F59 /* PFSFindSheltersRequest.swift in Sources */,
 				EE102E9E1DFB0EE800E53F59 /* PFSBreedItem.swift in Sources */,

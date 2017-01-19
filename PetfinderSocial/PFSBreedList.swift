@@ -9,17 +9,6 @@
 import Foundation
 import SwiftyJSON
 
-public enum PFSAnimalType: String {
-    case barnyard   = "barnyard"
-    case bird       = "bird"
-    case cat        = "cat"
-    case dog        = "dog"
-    case horse      = "horse"
-    case pig        = "pig"
-    case reptile    = "reptile"
-    case smallfurry = "smallfurry"
-}
-
 typealias BreedList = Array<PFSBreedItem>
 
 struct PFSBreedList {

@@ -16,12 +16,16 @@ class PFSBreedListRequest: PFSBaseRequest {
     {
         _animal = animal
         super.init(apiMethod: .BreedList)
-        urlParams.updateValue(animal.rawValue, forKey: PFSConstants.paramAnimalKey)
+        updateUrlParam(withValue: animal.rawValue, forKey: PFSConstants.paramAnimalKey)
     }
     
     var animal: PFSAnimalType {
         get {
             return _animal
+        }
+        set {
+            _animal = newValue
+            updateUrlParam(withValue: _animal.rawValue, forKey: PFSConstants.paramAnimalKey)
         }
     }
 }

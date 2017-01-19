@@ -16,12 +16,17 @@ struct PFSConstants {
     // API defaults
     static let defaultRecordCount   = 25
     static let defaultRecordOffset  = 0
+    static let recodLastOffset      = "lastOffset"
     
     // API parameter names/keys
     static let paramKey             = "key"
     static let paramFormat          = "format"
     static let paramOutput          = "output"
     static let paramAnimalKey       = "animal"
+    static let paramBreedKey        = "breed"
+    static let paramSizeKey         = "size"
+    static let paramSexKey          = "sex"
+    static let paramAgeKey          = "age"
     static let paramLocationKey     = "location"
     static let paramShelterNameKey  = "name"
     static let paramOffsetKey       = "offset"
@@ -46,4 +51,34 @@ struct PFSConstants {
     static let keyShelterFax        = "fax"
     static let keyShelterLatitude   = "latitude"
     static let keyShelterLongitude  = "longitude"
+}
+
+public enum PFSAnimalType: String {
+    case barnyard   = "barnyard"
+    case bird       = "bird"
+    case cat        = "cat"
+    case dog        = "dog"
+    case horse      = "horse"
+    case pig        = "pig"
+    case reptile    = "reptile"
+    case smallfurry = "smallfurry"
+}
+
+public enum PFSSizeType: String {
+    case small          = "small"
+    case medium         = "medium"
+    case large          = "large"
+    case extra_large    = "extra-large"
+}
+
+public enum PFSSexType: String {
+    case male   = "M"
+    case female = "F"
+}
+
+public enum PFSAgeType: String {
+    case baby   = "Baby"
+    case young  = "Young"
+    case adult  = "Adult"
+    case senior = "Senior"
 }
