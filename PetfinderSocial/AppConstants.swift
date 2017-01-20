@@ -29,6 +29,7 @@ struct PFSConstants {
     static let paramAgeKey          = "age"
     static let paramLocationKey     = "location"
     static let paramShelterNameKey  = "name"
+    static let paramShelterIdKey    = "shelterid"
     static let paramOffsetKey       = "offset"
     static let paramCountKey        = "count"
 

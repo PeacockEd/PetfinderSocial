@@ -8,12 +8,8 @@
 
 import Foundation
 
-class PFSFindPetRequest: PFSBaseRequest {
+class PFSFindPetRequest: PFSFindPetBaseRequest {
     
-    private var _animal: PFSAnimalType?
-    private var _breed: String?
-    private var _size: PFSSizeType?
-    private var _sex: PFSSexType?
     private var _location: String
     private var _age: PFSAgeType?
     private var _offset: String?
@@ -23,47 +19,12 @@ class PFSFindPetRequest: PFSBaseRequest {
     {
         _location = location
         super.init(apiMethod: .PetSearch)
-        urlParams.updateValue(_location, forKey: PFSConstants.paramLocationKey)
+        updateUrlParam(withValue: _location, forKey: PFSConstants.paramLocationKey)
     }
     
-    var animal: PFSAnimalType? {
-        get {
-            return _animal
-        }
-        set {
-            _animal = newValue
-            updateUrlParam(withValue: _animal?.rawValue, forKey: PFSConstants.paramAnimalKey)
-        }
-    }
-    
-    var breed: String? {
-        get {
-            return _breed
-        }
-        set {
-            _breed = newValue
-            updateUrlParam(withValue: _breed, forKey: PFSConstants.paramBreedKey)
-        }
-    }
-    
-    var size: PFSSizeType? {
-        get {
-            return _size
-        }
-        set {
-            _size = newValue
-            updateUrlParam(withValue: _size?.rawValue, forKey: PFSConstants.paramSizeKey)
-        }
-    }
-    
-    var sex: PFSSexType? {
-        get {
-            return _sex
-        }
-        set {
-            _sex = newValue
-            updateUrlParam(withValue: _sex?.rawValue, forKey: PFSConstants.paramSexKey)
-        }
+    convenience init(withLocation location: String, age: PFSAgeType) {
+        self.init(withLocation: location)
+        self.age = age
     }
     
     var location: String {

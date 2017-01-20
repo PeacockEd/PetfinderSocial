@@ -16,7 +16,7 @@ class PFSBreedListRequest: PFSBaseRequest {
     {
         _animal = animal
         super.init(apiMethod: .BreedList)
-        updateUrlParam(withValue: animal.rawValue, forKey: PFSConstants.paramAnimalKey)
+        updateUrlParam(withValue: _animal.rawValue, forKey: PFSConstants.paramAnimalKey)
     }
     
     var animal: PFSAnimalType {

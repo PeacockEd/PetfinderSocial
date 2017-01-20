@@ -27,7 +27,7 @@ class PFSDataService {
         }
     }
     
-    func findShelters(withRequest request:PFSFindSheltersRequest, completion: @escaping (PFSShelterList) -> ())
+    func findShelters(withRequest request: PFSFindSheltersRequest, completion: @escaping (PFSShelterList) -> ())
     {
         Alamofire.request(request.getRequestUrlWithApiMethod(), method: .get, parameters: request.getRequestUrlParameters(), encoding: URLEncoding.default).responseJSON { response in
             guard let codeResponse = response.response, codeResponse.statusCode == 200,
@@ -40,7 +40,16 @@ class PFSDataService {
         }
     }
     
-    func fetchRandomPet() {
-        
+    func fetchRandomPet(withRequest request: PFSGetRandomPetRequest, completion: () -> ())
+    {
+        Alamofire.request(request.getRequestUrlWithApiMethod(), method: .get, parameters: request.getRequestUrlParameters(), encoding: URLEncoding.default).responseJSON { response in
+            guard let codeResponse = response.response, codeResponse.statusCode == 200,
+                response.result.isSuccess == true, let value = response.result.value
+                else {
+                    // TODO : Handle error in some way
+                    return
+            }
+            debugPrint(value)
+        }
     }
 }
