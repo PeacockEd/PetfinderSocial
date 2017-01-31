@@ -14,7 +14,7 @@ struct PFSPetItem {
     private var _name: String?
     private var _animal: PFSAnimalType?
     private var _age: PFSAgeType?
-    private var _sex: PFSSexType?
+    private var _sex: PFSGenderType?
     private var _size: PFSSizeType?
     private var _breeds: PFSBreedList?
     private var _options: [String]?
@@ -58,7 +58,7 @@ struct PFSPetItem {
             }
             if let sex = data[PFSConstants.keyPetSex]?.dictionary,
                 let value = sex[PFSConstants.keyContentProperty]?.string {
-                _sex = PFSSexType.createSexType(forGender: value)
+                _sex = PFSGenderType.createGenderType(forGender: value)
             }
             if let size = data[PFSConstants.keyPetSize]?.dictionary,
                 let value = size[PFSConstants.keyContentProperty]?.string {
@@ -156,7 +156,7 @@ struct PFSPetItem {
         }
     }
     
-    var sex: PFSSexType? {
+    var sex: PFSGenderType? {
         get {
             return _sex
         }

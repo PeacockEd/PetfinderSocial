@@ -13,7 +13,7 @@ class PFSFindPetBaseRequest: PFSBaseRequest {
     private var _animal: PFSAnimalType?
     private var _breed: String?
     private var _size: PFSSizeType?
-    private var _sex: PFSSexType?
+    private var _sex: PFSGenderType?
     
     
     var animal: PFSAnimalType? {
@@ -46,7 +46,7 @@ class PFSFindPetBaseRequest: PFSBaseRequest {
         }
     }
     
-    var sex: PFSSexType? {
+    var sex: PFSGenderType? {
         get {
             return _sex
         }

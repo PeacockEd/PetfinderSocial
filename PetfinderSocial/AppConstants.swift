@@ -143,13 +143,13 @@ public enum PFSSizeType: String {
     }
 }
 
-public enum PFSSexType: String {
+public enum PFSGenderType: String {
     case male   = "M"
     case female = "F"
     case none   = "none"
     
-    static func createSexType(forGender gender: String?) -> PFSSexType {
-        var genderType = PFSSexType.none
+    static func createGenderType(forGender gender: String?) -> PFSGenderType {
+        var genderType = PFSGenderType.none
         guard let gender = gender?.lowercased() else {
             return genderType
         }
