@@ -17,7 +17,7 @@ struct PFSPetItem {
     private var _sex: PFSGenderType?
     private var _size: PFSSizeType?
     private var _breeds: PFSBreedList?
-    private var _options: [String]?
+    private var _options: [PFSPetOption]?
     private var _mix: Bool?
     private var _shelterId: String?
     private var _shelterPetId: String?
@@ -70,7 +70,7 @@ struct PFSPetItem {
             if let options = data[PFSConstants.keyPetOptions]?.dictionary {
                 if let option = options[PFSConstants.keyPetOption]?.dictionary {
                     if let value = option[PFSConstants.keyContentProperty]?.string {
-                        _options = [value]
+                        _options = [PFSPetOption.createOptionType(forOption: value)]
                     }
                 } else if let option = options[PFSConstants.keyPetOption]?.array {
                     _options = []
@@ -78,7 +78,7 @@ struct PFSPetItem {
                         guard let value = item[PFSConstants.keyContentProperty].string else {
                             continue
                         }
-                        _options!.append(value)
+                        _options!.append(PFSPetOption.createOptionType(forOption: value))
                     }
                 }
             }
@@ -174,7 +174,7 @@ struct PFSPetItem {
         }
     }
     
-    var options: [String]? {
+    var options: [PFSPetOption]? {
         get {
             return _options
         }

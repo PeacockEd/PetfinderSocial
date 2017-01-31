@@ -194,3 +194,44 @@ public enum PFSAgeType: String {
         return ageType
     }
 }
+
+public enum PFSPetOption: String {
+    case specialNeeds   = "specialNeeds"
+    case noDogs         = "noDogs"
+    case noCats         = "noCats"
+    case noKids         = "noKids"
+    case noClaws        = "noClaws"
+    case hasShots       = "hasShots"
+    case housebroken    = "housebroken"
+    case altered        = "altered"
+    case unknown        = "unknown"
+    
+    static func createOptionType(forOption option: String?) -> PFSPetOption {
+        var optionType = PFSPetOption.unknown
+        guard let option = option?.lowercased() else {
+            return optionType
+        }
+        
+        switch option {
+            case "specialneeds":
+                optionType = .specialNeeds
+            case "nodogs":
+                optionType = .noDogs
+            case "nocats":
+                optionType = .noCats
+            case "nokids":
+                optionType = .noKids
+            case "noclaws":
+                optionType = .noClaws
+            case "hasshots":
+                optionType = .hasShots
+            case "housebroken":
+                optionType = .housebroken
+            case "altered":
+                optionType = .altered
+            default:
+                optionType = .unknown
+        }
+        return optionType
+    }
+}
