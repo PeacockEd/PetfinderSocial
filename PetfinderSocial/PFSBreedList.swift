@@ -16,7 +16,7 @@ struct PFSBreedList {
     private let _animal: PFSAnimalType
     private var _items = BreedList()
     
-    init(forAnimal animal: PFSAnimalType, data:JSON) {
+    init(forAnimal animal: PFSAnimalType, data:[String: JSON]) {
         _animal = animal
         parseBreedsList(data: data)
     }
@@ -33,22 +33,24 @@ struct PFSBreedList {
         }
     }
     
-    mutating private func parseBreedsList(data:JSON) {
+    mutating private func parseBreedsList(data:[String: JSON]) {
         _items = BreedList()
-        guard let breedList = data[PFSConstants.keyPetfinder][PFSConstants.keyBreeds][PFSConstants.keyBreed].array else {
-            // TODO : Handle error in some way
-            return
-        }
         
-        for breed in breedList {
-            guard let name = breed[PFSConstants.keyContentProperty].string else {
-                continue
+        if let breedList = data[PFSConstants.keyBreed]?.dictionary {
+            if let name = breedList[PFSConstants.keyContentProperty]?.string {
+                _items = [PFSBreedItem(withBreedName: name)]
             }
-            _items.append(PFSBreedItem(withBreedName: name))
+        } else if let breedList = data[PFSConstants.keyBreed]?.array {
+            for breed in breedList {
+                guard let name = breed[PFSConstants.keyContentProperty].string else {
+                    continue
+                }
+                _items.append(PFSBreedItem(withBreedName: name))
+            }
         }
     }
     
-    static func breedListFromJSON(data: JSON, forAnimal animal: PFSAnimalType) -> PFSBreedList {
+    static func breedListFromDictionary(data: [String: JSON], forAnimal animal: PFSAnimalType) -> PFSBreedList {
         return self.init(forAnimal: animal, data: data)
     }
 }

@@ -24,6 +24,7 @@ struct PFSConstants {
     static let paramOutput          = "output"
     static let paramAnimalKey       = "animal"
     static let paramBreedKey        = "breed"
+    static let paramGenericIdKey    = "id"
     static let paramSizeKey         = "size"
     static let paramSexKey          = "sex"
     static let paramAgeKey          = "age"
@@ -39,7 +40,15 @@ struct PFSConstants {
     static let keyBreeds            = "breeds"
     static let keyBreed             = "breed"
     
-    static let keyShelterId         = "id"
+    static let keyPet               = "pet"
+    static let keyPetName           = "name"
+    static let keyPetId             = "id"
+    static let keyPetAnimal         = "animal"
+    static let keyPetAge            = "age"
+    static let keyPetSex            = "sex"
+    static let keyPetSize           = "size"
+    
+    static let keyShelterId         = "shelterId"
     static let keyShelterState      = "state"
     static let keyShelterCity       = "city"
     static let keyShelterAddress1   = "address1"
@@ -52,6 +61,15 @@ struct PFSConstants {
     static let keyShelterFax        = "fax"
     static let keyShelterLatitude   = "latitude"
     static let keyShelterLongitude  = "longitude"
+    
+    static let keyPetOptions        = "options"
+    static let keyPetOption         = "option"
+    static let keyPetMix            = "mix"
+    static let keyPetShelterId      = "shelterPetId"
+    static let keyPetStatus         = "status"
+    static let keyPetDescription    = "description"
+    static let keyPetLastUpdate     = "lastUpdate"
+    static let keyPetContact        = "contact"
 }
 
 public enum PFSAnimalType: String {
@@ -63,18 +81,89 @@ public enum PFSAnimalType: String {
     case pig        = "pig"
     case reptile    = "reptile"
     case smallfurry = "smallfurry"
+    case none       = "none"
+    
+    static func createAnimalType(forAnimal animal: String?) -> PFSAnimalType
+    {
+        var petType = PFSAnimalType.none
+        guard let type = animal?.lowercased() else {
+            return petType
+        }
+        
+        switch type {
+        case "barnyard" :
+            petType = .barnyard
+        case "bird" :
+            petType = .bird
+        case "cat" :
+            petType = .cat
+        case "dog" :
+            petType = .dog
+        case "horse" :
+            petType = .horse
+        case "pig" :
+            petType = .pig
+        case "reptile" :
+            petType = .reptile
+        case "smallfurry" :
+            petType = .smallfurry
+        default :
+            petType = .none
+        }
+        return petType
+    }
 }
 
 public enum PFSSizeType: String {
-    case small          = "small"
-    case medium         = "medium"
-    case large          = "large"
-    case extra_large    = "extra-large"
+    case small          = "S"
+    case medium         = "M"
+    case large          = "L"
+    case extra_large    = "XL"
+    case none           = "none"
+    
+    static func createSizeType(forSize size: String?) -> PFSSizeType {
+        var sizeType = PFSSizeType.none
+        guard let size = size?.lowercased() else {
+            return sizeType
+        }
+        
+        switch size {
+        case "s":
+            sizeType = .small
+        case "m":
+            sizeType = .medium
+        case "l":
+            sizeType = .large
+        case "xl":
+            sizeType = .extra_large
+        default:
+            sizeType = .none
+        }
+        return sizeType
+    }
 }
 
 public enum PFSSexType: String {
     case male   = "M"
     case female = "F"
+    case none   = "none"
+    
+    static func createSexType(forGender gender: String?) -> PFSSexType {
+        var genderType = PFSSexType.none
+        guard let gender = gender?.lowercased() else {
+            return genderType
+        }
+        
+        switch gender {
+        case "m":
+            genderType = .male
+        case "f":
+            genderType = .female
+        default:
+            genderType = .none
+        }
+        return genderType
+    }
 }
 
 public enum PFSAgeType: String {
@@ -82,4 +171,26 @@ public enum PFSAgeType: String {
     case young  = "Young"
     case adult  = "Adult"
     case senior = "Senior"
+    case none   = "none"
+    
+    static func createAgeType(forAge age: String?) -> PFSAgeType {
+        var ageType = PFSAgeType.none
+        guard let age = age?.lowercased() else {
+            return ageType
+        }
+        
+        switch age {
+        case "baby":
+            ageType = .baby
+        case "young":
+            ageType = .young
+        case "adult":
+            ageType = .adult
+        case "senior":
+            ageType = .senior
+        default:
+            ageType = .none
+        }
+        return ageType
+    }
 }

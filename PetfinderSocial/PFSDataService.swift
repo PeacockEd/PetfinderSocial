@@ -23,7 +23,10 @@ class PFSDataService {
                     // TODO : Handle error is some way
                     return
             }
-            completion(PFSBreedList.breedListFromJSON(data: JSON(value), forAnimal: request.animal))
+            if let breedsList = JSON(value)[PFSConstants.keyPetfinder][PFSConstants.keyBreeds].dictionary {
+                completion(PFSBreedList.breedListFromDictionary(data: breedsList, forAnimal: request.animal))
+            }
+            //debugPrint(value)
         }
     }
     
@@ -40,7 +43,7 @@ class PFSDataService {
         }
     }
     
-    func fetchRandomPet(withRequest request: PFSGetRandomPetRequest, completion: () -> ())
+    func fetchRandomPet(withRequest request: PFSGetRandomPetRequest, completion: @escaping (PFSPetItem?) -> ())
     {
         Alamofire.request(request.getRequestUrlWithApiMethod(), method: .get, parameters: request.getRequestUrlParameters(), encoding: URLEncoding.default).responseJSON { response in
             guard let codeResponse = response.response, codeResponse.statusCode == 200,
@@ -49,7 +52,8 @@ class PFSDataService {
                     // TODO : Handle error in some way
                     return
             }
-            debugPrint(value)
+            let randomPet = PFSPetItem.createPetItem(withData: JSON(value))
+            completion(randomPet)
         }
     }
 }

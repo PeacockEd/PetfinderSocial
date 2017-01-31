@@ -33,6 +33,11 @@ struct PFSShelterItem {
         parseItemData()
     }
     
+    init(withShelterId sId: String, data: [String: JSON]) {
+        self.init(data: data)
+        self._id = sId
+    }
+    
     private func inspectAndReturnValue(withKey key: String) -> String?
     {
         if let item = jsonData?[key]?.dictionary,

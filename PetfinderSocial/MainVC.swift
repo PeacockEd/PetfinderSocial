@@ -16,17 +16,20 @@ class MainVC: UIViewController {
         super.viewDidLoad()
         
 //        service.fetchBreedListing(withRequest: PFSBreedListRequest(forAnimal: .cat), completion: { result in
-//            debugPrint(result.data)
+//            print(result.items)
 //        })
         
 //        service.findShelters(withRequest: PFSFindSheltersRequest(withLocation: "10012"), completion: { result in
 //            for shelter in result.items {
-//                print("The name of this shelter is: \(shelter.name)")
+//                print("The name of this shelter is: \(shelter.name) and the ID is: \(shelter.id)")
 //            }
 //        })
         
-        service.fetchRandomPet(withRequest: PFSGetRandomPetRequest()) { 
-            //
+        let req = PFSGetRandomPetRequest()
+        //req.shelterId = "NY17"
+        req.location = "07712"
+        service.fetchRandomPet(withRequest: req) { result in
+            
         }
     }
 }

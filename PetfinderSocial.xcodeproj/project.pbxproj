@@ -16,6 +16,7 @@
 		EE1C32051E2FBF5200FC28CF /* PFSFindPetRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1C32041E2FBF5200FC28CF /* PFSFindPetRequest.swift */; };
 		EE2445F41E315D8A00488FA4 /* PFSFindPetBaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2445F31E315D8A00488FA4 /* PFSFindPetBaseRequest.swift */; };
 		EE2445F61E315E7D00488FA4 /* PFSGetRandomPetRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2445F51E315E7D00488FA4 /* PFSGetRandomPetRequest.swift */; };
+		EE2445F81E3251E300488FA4 /* PFSGetShelterRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2445F71E3251E300488FA4 /* PFSGetShelterRequest.swift */; };
 		EE55C7F41DE4CE6700EDE78F /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE55C7F31DE4CE6700EDE78F /* MainVC.swift */; };
 		EE7719DA1DE4D41B0071D66B /* DropShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7719D91DE4D41B0071D66B /* DropShadow.swift */; };
 		EE7719DC1DE4D5150071D66B /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7719DB1DE4D5150071D66B /* HeaderView.swift */; };
@@ -28,6 +29,7 @@
 		EE9AAE221DDF603C0076534A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE9AAE211DDF603C0076534A /* Assets.xcassets */; };
 		EE9AAE251DDF603C0076534A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE9AAE231DDF603C0076534A /* LaunchScreen.storyboard */; };
 		EEADBB3B1DEE74C500191586 /* PFSBreedListRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEADBB3A1DEE74C500191586 /* PFSBreedListRequest.swift */; };
+		EEFD58331E37D0DE0062CEFF /* PFSPetItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFD58321E37D0DE0062CEFF /* PFSPetItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,7 @@
 		EE1C32041E2FBF5200FC28CF /* PFSFindPetRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PFSFindPetRequest.swift; sourceTree = "<group>"; };
 		EE2445F31E315D8A00488FA4 /* PFSFindPetBaseRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PFSFindPetBaseRequest.swift; sourceTree = "<group>"; };
 		EE2445F51E315E7D00488FA4 /* PFSGetRandomPetRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PFSGetRandomPetRequest.swift; sourceTree = "<group>"; };
+		EE2445F71E3251E300488FA4 /* PFSGetShelterRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PFSGetShelterRequest.swift; sourceTree = "<group>"; };
 		EE55C7F31DE4CE6700EDE78F /* MainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		EE7719D91DE4D41B0071D66B /* DropShadow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropShadow.swift; sourceTree = "<group>"; };
 		EE7719DB1DE4D5150071D66B /* HeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
@@ -56,6 +59,7 @@
 		EE9AAE241DDF603C0076534A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EE9AAE261DDF603C0076534A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EEADBB3A1DEE74C500191586 /* PFSBreedListRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PFSBreedListRequest.swift; sourceTree = "<group>"; };
+		EEFD58321E37D0DE0062CEFF /* PFSPetItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PFSPetItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +98,7 @@
 				EE102E991DF7ADC900E53F59 /* PFSShelterItem.swift */,
 				EE102E9B1DFB0BEA00E53F59 /* PFSShelterList.swift */,
 				EE102E9D1DFB0EE800E53F59 /* PFSBreedItem.swift */,
+				EEFD58321E37D0DE0062CEFF /* PFSPetItem.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -146,6 +151,7 @@
 				EE1C32041E2FBF5200FC28CF /* PFSFindPetRequest.swift */,
 				EE2445F31E315D8A00488FA4 /* PFSFindPetBaseRequest.swift */,
 				EE2445F51E315E7D00488FA4 /* PFSGetRandomPetRequest.swift */,
+				EE2445F71E3251E300488FA4 /* PFSGetShelterRequest.swift */,
 			);
 			name = Service;
 			sourceTree = "<group>";
@@ -317,6 +323,7 @@
 				EE7719DA1DE4D41B0071D66B /* DropShadow.swift in Sources */,
 				EE55C7F41DE4CE6700EDE78F /* MainVC.swift in Sources */,
 				EE83EDC11DE5F9DD00BD27A2 /* AppConstants.swift in Sources */,
+				EE2445F81E3251E300488FA4 /* PFSGetShelterRequest.swift in Sources */,
 				EE102E961DF48DA400E53F59 /* PFSBreedList.swift in Sources */,
 				EE1C32051E2FBF5200FC28CF /* PFSFindPetRequest.swift in Sources */,
 				EE7719DC1DE4D5150071D66B /* HeaderView.swift in Sources */,
@@ -330,6 +337,7 @@
 				EE2445F41E315D8A00488FA4 /* PFSFindPetBaseRequest.swift in Sources */,
 				EE102E9A1DF7ADC900E53F59 /* PFSShelterItem.swift in Sources */,
 				EE83EDBC1DE5391300BD27A2 /* PFSDataService.swift in Sources */,
+				EEFD58331E37D0DE0062CEFF /* PFSPetItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
