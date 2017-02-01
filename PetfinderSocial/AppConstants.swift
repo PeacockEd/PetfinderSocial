@@ -72,6 +72,35 @@ struct PFSConstants {
     static let keyPetContact        = "contact"
 }
 
+public enum PFSAgeType: String {
+    case baby   = "Baby"
+    case young  = "Young"
+    case adult  = "Adult"
+    case senior = "Senior"
+    case none   = "none"
+    
+    static func createAgeType(forAge age: String?) -> PFSAgeType {
+        var ageType = PFSAgeType.none
+        guard let age = age?.lowercased() else {
+            return ageType
+        }
+        
+        switch age {
+        case "baby":
+            ageType = .baby
+        case "young":
+            ageType = .young
+        case "adult":
+            ageType = .adult
+        case "senior":
+            ageType = .senior
+        default:
+            ageType = .none
+        }
+        return ageType
+    }
+}
+
 public enum PFSAnimalType: String {
     case barnyard   = "barnyard"
     case bird       = "bird"
@@ -114,6 +143,98 @@ public enum PFSAnimalType: String {
     }
 }
 
+public enum PFSGenderType: String {
+    case male   = "M"
+    case female = "F"
+    case none   = "none"
+    
+    static func createGenderType(forGender gender: String?) -> PFSGenderType {
+        var genderType = PFSGenderType.none
+        guard let gender = gender?.lowercased() else {
+            return genderType
+        }
+        
+        switch gender {
+        case "m":
+            genderType = .male
+        case "f":
+            genderType = .female
+        default:
+            genderType = .none
+        }
+        return genderType
+    }
+}
+
+public enum PFSPetOption: String {
+    case specialNeeds   = "specialNeeds"
+    case noDogs         = "noDogs"
+    case noCats         = "noCats"
+    case noKids         = "noKids"
+    case noClaws        = "noClaws"
+    case hasShots       = "hasShots"
+    case housebroken    = "housebroken"
+    case altered        = "altered"
+    case unknown        = "unknown"
+    
+    static func createOptionType(forOption option: String?) -> PFSPetOption {
+        var optionType = PFSPetOption.unknown
+        guard let option = option?.lowercased() else {
+            return optionType
+        }
+        
+        switch option {
+        case "specialneeds":
+            optionType = .specialNeeds
+        case "nodogs":
+            optionType = .noDogs
+        case "nocats":
+            optionType = .noCats
+        case "nokids":
+            optionType = .noKids
+        case "noclaws":
+            optionType = .noClaws
+        case "hasshots":
+            optionType = .hasShots
+        case "housebroken":
+            optionType = .housebroken
+        case "altered":
+            optionType = .altered
+        default:
+            optionType = .unknown
+        }
+        return optionType
+    }
+}
+
+public enum PFSPetStatusType: String {
+    case a          = "adoptable"
+    case h          = "hold"
+    case p          = "pending"
+    case x          = "unavailable"
+    case unknown    = "unknown"
+    
+    static func createPetStatusType(forStatus status: String?) -> PFSPetStatusType {
+        var statusType = PFSPetStatusType.unknown
+        guard let status = status?.lowercased() else {
+            return statusType
+        }
+        
+        switch status {
+        case "a":
+            statusType = .a
+        case "h":
+            statusType = .h
+        case "p":
+            statusType = .p
+        case "x":
+            statusType = .x
+        default:
+            statusType = .unknown
+        }
+    }
+}
+
 public enum PFSSizeType: String {
     case small          = "S"
     case medium         = "M"
@@ -140,98 +261,5 @@ public enum PFSSizeType: String {
             sizeType = .none
         }
         return sizeType
-    }
-}
-
-public enum PFSGenderType: String {
-    case male   = "M"
-    case female = "F"
-    case none   = "none"
-    
-    static func createGenderType(forGender gender: String?) -> PFSGenderType {
-        var genderType = PFSGenderType.none
-        guard let gender = gender?.lowercased() else {
-            return genderType
-        }
-        
-        switch gender {
-        case "m":
-            genderType = .male
-        case "f":
-            genderType = .female
-        default:
-            genderType = .none
-        }
-        return genderType
-    }
-}
-
-public enum PFSAgeType: String {
-    case baby   = "Baby"
-    case young  = "Young"
-    case adult  = "Adult"
-    case senior = "Senior"
-    case none   = "none"
-    
-    static func createAgeType(forAge age: String?) -> PFSAgeType {
-        var ageType = PFSAgeType.none
-        guard let age = age?.lowercased() else {
-            return ageType
-        }
-        
-        switch age {
-        case "baby":
-            ageType = .baby
-        case "young":
-            ageType = .young
-        case "adult":
-            ageType = .adult
-        case "senior":
-            ageType = .senior
-        default:
-            ageType = .none
-        }
-        return ageType
-    }
-}
-
-public enum PFSPetOption: String {
-    case specialNeeds   = "specialNeeds"
-    case noDogs         = "noDogs"
-    case noCats         = "noCats"
-    case noKids         = "noKids"
-    case noClaws        = "noClaws"
-    case hasShots       = "hasShots"
-    case housebroken    = "housebroken"
-    case altered        = "altered"
-    case unknown        = "unknown"
-    
-    static func createOptionType(forOption option: String?) -> PFSPetOption {
-        var optionType = PFSPetOption.unknown
-        guard let option = option?.lowercased() else {
-            return optionType
-        }
-        
-        switch option {
-            case "specialneeds":
-                optionType = .specialNeeds
-            case "nodogs":
-                optionType = .noDogs
-            case "nocats":
-                optionType = .noCats
-            case "nokids":
-                optionType = .noKids
-            case "noclaws":
-                optionType = .noClaws
-            case "hasshots":
-                optionType = .hasShots
-            case "housebroken":
-                optionType = .housebroken
-            case "altered":
-                optionType = .altered
-            default:
-                optionType = .unknown
-        }
-        return optionType
     }
 }

@@ -21,7 +21,7 @@ struct PFSPetItem {
     private var _mix: Bool?
     private var _shelterId: String?
     private var _shelterPetId: String?
-    private var _status: String?
+    private var _status: PFSPetStatusType?
     private var _contact: PFSPetContactItem?
     private var _description: String?
     private var _photos: [String]?
@@ -99,7 +99,7 @@ struct PFSPetItem {
             }
             if let status = data[PFSConstants.keyPetStatus]?.dictionary {
                 if let value = status[PFSConstants.keyContentProperty]?.string {
-                    _status = value
+                    _status = PFSPetStatusType.createPetStatusType(forStatus: value)
                 }
             }
             if let description = data[PFSConstants.keyPetDescription]?.dictionary {
@@ -194,7 +194,7 @@ struct PFSPetItem {
         }
     }
     
-    var status: String? {
+    var status: PFSPetStatusType? {
         get {
             return _status
         }
