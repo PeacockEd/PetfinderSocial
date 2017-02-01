@@ -22,7 +22,7 @@ struct PFSPetItem {
     private var _shelterId: String?
     private var _shelterPetId: String?
     private var _status: String?
-    private var _contact: PFSShelterItem?
+    private var _contact: PFSPetContactItem?
     private var _description: String?
     private var _photos: [String]?
     private var _lastUpdated: Date?
@@ -108,11 +108,7 @@ struct PFSPetItem {
                 }
             }
             if let contact = data[PFSConstants.keyPetContact]?.dictionary {
-                if let sId = _shelterId {
-                    _contact = PFSShelterItem(withShelterId: sId, data: contact)
-                } else {
-                    _contact = PFSShelterItem.createShelterItem(withDictionary: contact)
-                }
+                _contact = PFSPetContactItem.createContactItem(withDictionary: contact)
             }
             if let date = data[PFSConstants.keyPetLastUpdate]?.dictionary {
                 if let value = date[PFSConstants.keyContentProperty]?.string {
@@ -204,7 +200,7 @@ struct PFSPetItem {
         }
     }
     
-    var contact: PFSShelterItem? {
+    var contact: PFSPetContactItem? {
         get {
             return _contact
         }

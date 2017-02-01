@@ -10,6 +10,7 @@ import Foundation
 import SwiftyJSON
 
 struct PFSShelterItem {
+    
     private var _id: String?
     private var _name: String?
     private var _address1: String?
@@ -31,11 +32,6 @@ struct PFSShelterItem {
     init(data: [String: JSON]) {
         jsonData = data
         parseItemData()
-    }
-    
-    init(withShelterId sId: String, data: [String: JSON]) {
-        self.init(data: data)
-        self._id = sId
     }
     
     private func inspectAndReturnValue(withKey key: String) -> String?

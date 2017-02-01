@@ -29,6 +29,7 @@
 		EE9AAE221DDF603C0076534A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE9AAE211DDF603C0076534A /* Assets.xcassets */; };
 		EE9AAE251DDF603C0076534A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE9AAE231DDF603C0076534A /* LaunchScreen.storyboard */; };
 		EEADBB3B1DEE74C500191586 /* PFSBreedListRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEADBB3A1DEE74C500191586 /* PFSBreedListRequest.swift */; };
+		EEFCDB9E1E41766F007AC729 /* PFSPetContactItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFCDB9D1E41766F007AC729 /* PFSPetContactItem.swift */; };
 		EEFD58331E37D0DE0062CEFF /* PFSPetItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFD58321E37D0DE0062CEFF /* PFSPetItem.swift */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +60,7 @@
 		EE9AAE241DDF603C0076534A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EE9AAE261DDF603C0076534A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EEADBB3A1DEE74C500191586 /* PFSBreedListRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PFSBreedListRequest.swift; sourceTree = "<group>"; };
+		EEFCDB9D1E41766F007AC729 /* PFSPetContactItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PFSPetContactItem.swift; sourceTree = "<group>"; };
 		EEFD58321E37D0DE0062CEFF /* PFSPetItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PFSPetItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -99,6 +101,7 @@
 				EE102E9B1DFB0BEA00E53F59 /* PFSShelterList.swift */,
 				EE102E9D1DFB0EE800E53F59 /* PFSBreedItem.swift */,
 				EEFD58321E37D0DE0062CEFF /* PFSPetItem.swift */,
+				EEFCDB9D1E41766F007AC729 /* PFSPetContactItem.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -330,6 +333,7 @@
 				EE102E981DF798C500E53F59 /* PFSFindSheltersRequest.swift in Sources */,
 				EE102E9E1DFB0EE800E53F59 /* PFSBreedItem.swift in Sources */,
 				EEADBB3B1DEE74C500191586 /* PFSBreedListRequest.swift in Sources */,
+				EEFCDB9E1E41766F007AC729 /* PFSPetContactItem.swift in Sources */,
 				EE83EDBE1DE5F52C00BD27A2 /* PFSBaseRequest.swift in Sources */,
 				EE102E9C1DFB0BEA00E53F59 /* PFSShelterList.swift in Sources */,
 				EE7719DE1DE4FD9A0071D66B /* APIKey.swift in Sources */,
