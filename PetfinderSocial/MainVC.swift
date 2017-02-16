@@ -26,9 +26,12 @@ class MainVC: UIViewController {
 //        })
         
         let req = PFSGetRandomPetRequest()
-        //req.shelterId = "NY17"
         req.location = "10012"
-        service.fetchRandomPet(withRequest: req) { result in
+        service.fetchRandomPet(withRequest: req) { (result, error) in
+            guard let result = result, error == nil else {
+                print("Error!!! Error = \(error!.errorDescription)")
+                return
+            }
             debugPrint(result)
         }
     }

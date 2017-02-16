@@ -24,7 +24,7 @@ struct PFSPetItem {
     private var _status: PFSPetStatusType?
     private var _contact: PFSPetContactItem?
     private var _description: String?
-    private var _photos: [String]?
+    private var _photos: [PFSPetPhotoItem]?
     private var _lastUpdated: Date?
     
     private var data: [String: JSON]?
@@ -109,6 +109,25 @@ struct PFSPetItem {
             }
             if let contact = data[PFSConstants.keyPetContact]?.dictionary {
                 _contact = PFSPetContactItem.createContactItem(withDictionary: contact)
+            }
+            if let media = data[PFSConstants.keyPetMedia]?.dictionary,
+                let photos = media[PFSConstants.keyPetPhotos]?.dictionary,
+                let photo = photos[PFSConstants.keyPetPhoto]?.array {
+                _photos = []
+                for item in photo {
+                    guard let photoDict = item.dictionary else {
+                        continue
+                    }
+                    /*
+                    guard let id = item["@id"].string,
+                    let size = item["@size"].string,
+                        let url = item[PFSConstants.keyContentProperty].string else {
+                            continue
+                    }
+                    */
+                    _photos?.append(PFSPetPhotoItem.createPhotoItem(withDictionary: photoDict))
+                    //print("MEDIA PHOTO ITEM: id:\(id), size:\(size), url:\(url)")
+                }
             }
             if let date = data[PFSConstants.keyPetLastUpdate]?.dictionary {
                 if let value = date[PFSConstants.keyContentProperty]?.string {
@@ -212,7 +231,7 @@ struct PFSPetItem {
         }
     }
     
-    var photos: [String]? {
+    var photos: [PFSPetPhotoItem]? {
         get {
             return _photos
         }

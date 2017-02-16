@@ -37,6 +37,10 @@ struct PFSConstants {
     // Content description keys
     static let keyContentProperty   = "$t"
     static let keyPetfinder         = "petfinder"
+    static let keyResponseHeader    = "header"
+    static let keyResponseStatus    = "status"
+    static let keyResponseCode      = "code"
+    static let keyResponseMessage   = "message"
     static let keyBreeds            = "breeds"
     static let keyBreed             = "breed"
     
@@ -70,6 +74,10 @@ struct PFSConstants {
     static let keyPetDescription    = "description"
     static let keyPetLastUpdate     = "lastUpdate"
     static let keyPetContact        = "contact"
+    
+    static let keyPetMedia          = "media"
+    static let keyPetPhoto          = "photo"
+    static let keyPetPhotos         = "photos"
 }
 
 public enum PFSAgeType: String {
@@ -174,6 +182,7 @@ public enum PFSPetOption: String {
     case noClaws        = "noClaws"
     case hasShots       = "hasShots"
     case housebroken    = "housebroken"
+    case housetrained   = "housetrained"
     case altered        = "altered"
     case unknown        = "unknown"
     
@@ -198,6 +207,8 @@ public enum PFSPetOption: String {
             optionType = .hasShots
         case "housebroken":
             optionType = .housebroken
+        case "housetrained":
+            optionType = .housetrained
         case "altered":
             optionType = .altered
         default:
@@ -232,6 +243,7 @@ public enum PFSPetStatusType: String {
         default:
             statusType = .unknown
         }
+        return statusType
     }
 }
 
