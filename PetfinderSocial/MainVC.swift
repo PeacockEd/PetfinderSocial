@@ -25,11 +25,24 @@ class MainVC: UIViewController {
 //            }
 //        })
         
-        let req = PFSGetRandomPetRequest()
-        req.location = "10012"
-        service.fetchRandomPet(withRequest: req) { (result, error) in
-            guard let result = result, error == nil else {
-                print("Error!!! Error = \(error!.errorDescription)")
+//        let req = PFSGetRandomPetRequest()
+//        req.location = "10012"
+//        service.fetchRandomPet(withRequest: req) { (result, error) in
+//            guard let result = result else {
+//                if let error = error {
+//                    print("Error!!! Error = \(error.errorDescription)")
+//                }
+//                return
+//            }
+//            debugPrint(result)
+//        }
+        
+        let req = PFSGetPetByIdRequest(withPetId: 36004233)
+        service.getPetById(withRequest: req) { (result, error) in
+            guard let result = result else {
+                if let error = error {
+                    print("Error fetching a pet by id. Error: \(error.errorDescription)")
+                }
                 return
             }
             debugPrint(result)

@@ -10,31 +10,19 @@ import Foundation
 
 class PFSFindPetRequest: PFSFindPetBaseRequest {
     
-    private var _location: String
     private var _age: PFSAgeType?
     private var _offset: String?
     private var _count: Int?
     
-    init(withLocation location: String)
-    {
-        _location = location
+    
+    init() {
         super.init(apiMethod: .PetSearch)
-        updateUrlParam(withValue: _location, forKey: PFSConstants.paramLocationKey)
     }
     
     convenience init(withLocation location: String, age: PFSAgeType) {
-        self.init(withLocation: location)
+        self.init()
+        self.location = location
         self.age = age
-    }
-    
-    var location: String {
-        get {
-            return _location
-        }
-        set {
-            _location = newValue
-            updateUrlParam(withValue: _location, forKey: PFSConstants.paramLocationKey)
-        }
     }
     
     var age: PFSAgeType? {

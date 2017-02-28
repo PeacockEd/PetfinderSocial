@@ -14,7 +14,12 @@ class PFSFindPetBaseRequest: PFSBaseRequest {
     private var _breed: String?
     private var _size: PFSSizeType?
     private var _sex: PFSGenderType?
+    private var _location: String?
     
+    
+    override init(apiMethod method: APIMethod) {
+        super.init(apiMethod: method)
+    }
     
     var animal: PFSAnimalType? {
         get {
@@ -53,6 +58,16 @@ class PFSFindPetBaseRequest: PFSBaseRequest {
         set {
             _sex = newValue
             updateUrlParam(withValue: _sex?.rawValue, forKey: PFSConstants.paramSexKey)
+        }
+    }
+    
+    var location: String? {
+        get {
+            return _location
+        }
+        set {
+            _location = newValue
+            updateUrlParam(withValue: _location, forKey: PFSConstants.paramLocationKey)
         }
     }
 }

@@ -10,16 +10,11 @@ import Foundation
 
 class PFSGetRandomPetRequest: PFSFindPetBaseRequest {
     
-    private var _location: String?
     private var _shelterId: String?
+    
     
     init() {
         super.init(apiMethod: .RandomPet)
-    }
-    
-    convenience init(withLocation location: String) {
-        self.init()
-        self.location = location
     }
     
     convenience init(withShelterId shelterId: String) {
@@ -31,16 +26,6 @@ class PFSGetRandomPetRequest: PFSFindPetBaseRequest {
         self.init()
         self.location = location
         self.shelterId = shelterId
-    }
-    
-    var location: String? {
-        get {
-            return _location
-        }
-        set {
-            _location = newValue
-            updateUrlParam(withValue: _location, forKey: PFSConstants.paramLocationKey)
-        }
     }
     
     var shelterId: String? {

@@ -28,6 +28,11 @@ class PFSDataService {
             }
             if let breedsList = JSON(value)[PFSConstants.keyPetfinder][PFSConstants.keyBreeds].dictionary {
                 completion(PFSBreedList.breedListFromDictionary(data: breedsList, forAnimal: request.animal), nil)
+            } else {
+                let statusCode = StatusCodes.UNABLE_TO_COMPLETE_REQUEST
+                error = PFSError.genericServerError(code: statusCode.rawValue, description: statusCode.description, message: statusCode.description)
+                completion(nil, error)
+                return
             }
             //debugPrint(value)
         }
@@ -45,12 +50,12 @@ class PFSDataService {
                     completion(nil, error)
                     return
             }
-            if let code = JSON(value)[PFSConstants.keyPetfinder][PFSConstants.keyResponseHeader][PFSConstants.keyPetStatus][PFSConstants.keyResponseCode].dictionary,
+            if let code = JSON(value)[PFSConstants.keyPetfinder][PFSConstants.keyResponseHeader][PFSConstants.keyResponseStatus][PFSConstants.keyResponseCode].dictionary,
                 let respCode = code[PFSConstants.keyContentProperty]?.string,
                 let intCode = Int(respCode), intCode > 100 {
                 let statusCode = StatusCodes(rawValue: intCode) ?? StatusCodes.PFAPI_UNKNOWN_ERROR
                 var errorMsg = PFSErrorStrings.unknownErrorMessage
-                if let msg = JSON(value)[PFSConstants.keyPetfinder][PFSConstants.keyResponseHeader][PFSConstants.keyPetStatus][PFSConstants.keyResponseCode].dictionary,
+                if let msg = JSON(value)[PFSConstants.keyPetfinder][PFSConstants.keyResponseHeader][PFSConstants.keyResponseStatus][PFSConstants.keyResponseCode].dictionary,
                     let msgStr = msg[PFSConstants.keyContentProperty]?.string {
                     errorMsg = msgStr
                 }
@@ -74,12 +79,41 @@ class PFSDataService {
                     completion(nil, error)
                     return
             }
-            if let code = JSON(value)[PFSConstants.keyPetfinder][PFSConstants.keyResponseHeader][PFSConstants.keyPetStatus][PFSConstants.keyResponseCode].dictionary,
+            if let code = JSON(value)[PFSConstants.keyPetfinder][PFSConstants.keyResponseHeader][PFSConstants.keyResponseStatus][PFSConstants.keyResponseCode].dictionary,
                 let respCode = code[PFSConstants.keyContentProperty]?.string,
                 let intCode = Int(respCode), intCode > 100 {
                 let statusCode = StatusCodes(rawValue: intCode) ?? StatusCodes.PFAPI_UNKNOWN_ERROR
                 var errorMsg = PFSErrorStrings.unknownErrorMessage
-                if let msg = JSON(value)[PFSConstants.keyPetfinder][PFSConstants.keyResponseHeader][PFSConstants.keyPetStatus][PFSConstants.keyResponseMessage].dictionary,
+                if let msg = JSON(value)[PFSConstants.keyPetfinder][PFSConstants.keyResponseHeader][PFSConstants.keyResponseStatus][PFSConstants.keyResponseMessage].dictionary,
+                    let msgStr = msg[PFSConstants.keyContentProperty]?.string {
+                    errorMsg = msgStr
+                }
+                error = PFSError.petfinderApiError(code: statusCode.rawValue, description: statusCode.description, message: errorMsg)
+                completion(nil, error)
+                return
+            }
+            completion(PFSPetItem.createPetItem(withData: JSON(value)), nil)
+        }
+    }
+    
+    func getPetById(withRequest request: PFSGetPetByIdRequest, completion: @escaping (PFSPetItem?, PFSError?) -> ())
+    {
+        Alamofire.request(request.getRequestUrlWithApiMethod(), method: .get, parameters: request.getRequestUrlParameters(), encoding: URLEncoding.default).responseJSON { (response) in
+            var error: PFSError? = nil
+            guard let codeResponse = response.response, codeResponse.statusCode == 200,
+                response.result.isSuccess == true, let value = response.result.value
+            else {
+                let statusCode = StatusCodes.UNABLE_TO_COMPLETE_REQUEST
+                error = PFSError.genericServerError(code: statusCode.rawValue, description: statusCode.description, message: statusCode.description)
+                completion(nil, error)
+                return
+            }
+            if let code = JSON(value)[PFSConstants.keyPetfinder][PFSConstants.keyResponseHeader][PFSConstants.keyResponseStatus][PFSConstants.keyResponseCode].dictionary,
+                let respCode = code[PFSConstants.keyContentProperty]?.string,
+                let intCode = Int(respCode), intCode > 100 {
+                let statusCode = StatusCodes(rawValue: intCode) ?? StatusCodes.PFAPI_UNKNOWN_ERROR
+                var errorMsg = PFSErrorStrings.unknownErrorMessage
+                if let msg = JSON(value)[PFSConstants.keyPetfinder][PFSConstants.keyResponseHeader][PFSConstants.keyResponseStatus][PFSConstants.keyResponseMessage].dictionary,
                     let msgStr = msg[PFSConstants.keyContentProperty]?.string {
                     errorMsg = msgStr
                 }

@@ -24,6 +24,7 @@
 		EE83EDBC1DE5391300BD27A2 /* PFSDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE83EDBB1DE5391300BD27A2 /* PFSDataService.swift */; };
 		EE83EDBE1DE5F52C00BD27A2 /* PFSBaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE83EDBD1DE5F52C00BD27A2 /* PFSBaseRequest.swift */; };
 		EE83EDC11DE5F9DD00BD27A2 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE83EDC01DE5F9DD00BD27A2 /* AppConstants.swift */; };
+		EE8C5C7D1E64A2F9002C7347 /* PFSGetPetByIdRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8C5C7C1E64A2F9002C7347 /* PFSGetPetByIdRequest.swift */; };
 		EE9AAE1B1DDF603C0076534A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9AAE1A1DDF603C0076534A /* AppDelegate.swift */; };
 		EE9AAE201DDF603C0076534A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE9AAE1E1DDF603C0076534A /* Main.storyboard */; };
 		EE9AAE221DDF603C0076534A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE9AAE211DDF603C0076534A /* Assets.xcassets */; };
@@ -55,6 +56,7 @@
 		EE83EDBB1DE5391300BD27A2 /* PFSDataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PFSDataService.swift; sourceTree = "<group>"; };
 		EE83EDBD1DE5F52C00BD27A2 /* PFSBaseRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PFSBaseRequest.swift; sourceTree = "<group>"; };
 		EE83EDC01DE5F9DD00BD27A2 /* AppConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		EE8C5C7C1E64A2F9002C7347 /* PFSGetPetByIdRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PFSGetPetByIdRequest.swift; sourceTree = "<group>"; };
 		EE9AAE171DDF603C0076534A /* PetfinderSocial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PetfinderSocial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE9AAE1A1DDF603C0076534A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EE9AAE1F1DDF603C0076534A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 				EEADBB3A1DEE74C500191586 /* PFSBreedListRequest.swift */,
 				EE102E971DF798C500E53F59 /* PFSFindSheltersRequest.swift */,
 				EE1C32041E2FBF5200FC28CF /* PFSFindPetRequest.swift */,
+				EE8C5C7C1E64A2F9002C7347 /* PFSGetPetByIdRequest.swift */,
 				EE2445F31E315D8A00488FA4 /* PFSFindPetBaseRequest.swift */,
 				EE2445F51E315E7D00488FA4 /* PFSGetRandomPetRequest.swift */,
 				EE2445F71E3251E300488FA4 /* PFSGetShelterRequest.swift */,
@@ -340,6 +343,7 @@
 				EE102E981DF798C500E53F59 /* PFSFindSheltersRequest.swift in Sources */,
 				EE102E9E1DFB0EE800E53F59 /* PFSBreedItem.swift in Sources */,
 				EEADBB3B1DEE74C500191586 /* PFSBreedListRequest.swift in Sources */,
+				EE8C5C7D1E64A2F9002C7347 /* PFSGetPetByIdRequest.swift in Sources */,
 				EEFCDB9E1E41766F007AC729 /* PFSPetContactItem.swift in Sources */,
 				EE83EDBE1DE5F52C00BD27A2 /* PFSBaseRequest.swift in Sources */,
 				EE102E9C1DFB0BEA00E53F59 /* PFSShelterList.swift in Sources */,
